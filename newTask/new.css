@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.newContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newContainer .sideNave {
+  width: 8vw;
+  height: 100vh;
+  background-color: #303d4d;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newContainer .sideNave #h3 {
+  margin: 0 auto;
+}
+
+.newContainer .addingTask {
+  width: 30vw;
+  padding: 15px;
+}
+
+.newContainer .addingTask .addingWrapper {
+  background-color: #f8f9fa;
+  margin-top: 1rem;
+  border: 1px solid #f0f1f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+}
+
+.newContainer .addingTask .addingWrapper .tasksCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newContainer .addingTask .addingWrapper .tasksCount p {
+  padding: 0.5rem;
+  font-weight: 600;
+  color: #978c85;
+}
+
+.newContainer .addingTask .addingWrapper .Add p {
+  padding: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.newContainer .addingTask .addingDetails {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  background-color: #ecf6fc;
+  width: 100%;
+  height: 40vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 1300;
+  padding: 10px;
+}
+
+.newContainer .addingTask .addingDetails .taskDes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .taskDes input[type="text"] {
+  height: 4.5vh;
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime {
+  position: relative;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 input[type="date"] {
+  margin-top: 0.5rem;
+  width: 14vw;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  height: 4.5vh;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 input[type="time"] {
+  margin-top: 0.5rem;
+  width: 10vw;
+  border: none;
+  outline: none;
+  height: 4.5vh;
+  padding-left: 2.5rem;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 img {
+  position: absolute;
+  top: 2.8rem;
+  left: 20rem;
+}
+
+.newContainer .addingTask .addingDetails .AssignUsers {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .AssignUsers input[type="text"] {
+  margin-top: 0.5rem;
+  border: none;
+  outline: none;
+  height: 4.5vh;
+  padding-left: 1rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 2rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons button {
+  margin-top: 2rem;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.newContainer .addingTask .addingDetails .buttons #cancel {
+  padding: 0.5rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons #cancel:hover {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.newContainer .addingTask .addingDetails .buttons #save {
+  background-color: #47bb7f;
+  color: #ffff;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.newContainer .addingTask .addingDetails .buttons .update {
+  background-color: red;
+  color: #ffff;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.newContainer .addingTask .allShowData {
+  margin-top: 1rem;
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 {
+  background-color: #f8f9fa;
+  margin-top: 1rem;
+  border: 1px solid #f0f1f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  max-height: 5vh;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .userImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5vw;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 p:nth-child(1) {
+  font-weight: 600;
+  color: #000;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 p:nth-child(2) {
+  font-weight: 600;
+  color: rgba(255, 0, 0, 0.87);
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 {
+  width: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 img {
+  padding: 0.1rem;
+  cursor: pointer;
+}
+
+.newContainer .addingTask .allShowData .ShowUserUpdates {
+  display: none;
+  background-color: #ecf6fc;
+  height: 15vh;
+}
+/*# sourceMappingURL=new.css.map */
