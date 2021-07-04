@@ -216,7 +216,7 @@ export default function NewTask() {
     fetch2();
     fetch3();
     getAll();
-  }, [1]);
+  }, []);
   //ends
   return (
     <div className="newContainer">
