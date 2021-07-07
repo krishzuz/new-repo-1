@@ -1,0 +1,819 @@
+@import url("http://cdn.syncfusion.com/ej2/material.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.newContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newContainer .addingTask {
+  width: 22vw;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.newContainer .addingTask .addingWrapper {
+  max-height: 5vh;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ced4da;
+  border-left: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+}
+
+.newContainer .addingTask .addingWrapper .tasksCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1.3rem;
+}
+
+.newContainer .addingTask .addingWrapper .tasksCount p {
+  padding: 0.5rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.newContainer .addingTask .addingWrapper .tasksCount span {
+  color: #000;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.newContainer .addingTask .addingWrapper .Add {
+  width: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid #ced4da;
+  background-color: #f8f9fa;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newContainer .addingTask .addingWrapper .Add:hover {
+  background-color: #e2e6ea;
+}
+
+.newContainer .addingTask .addingWrapper .Add p {
+  padding: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.newContainer .addingTask .addingDetails {
+  border: 1px solid #ced4da;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  background-color: #ecf6fc;
+  width: 22vw;
+  height: 35vh;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #8175a6;
+  padding: 10px;
+}
+
+.newContainer .addingTask .addingDetails .taskDes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .taskDes input[type="text"] {
+  height: 4.5vh;
+  margin-top: 0.5rem;
+  border: 1px solid #ced4da;
+  outline: none;
+  padding-left: 1rem;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .taskDes input[type="text"]:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 input[type="date"] {
+  margin-top: 0.5rem;
+  width: 8vw;
+  border: 1px solid #ced4da;
+  outline: none;
+  padding-left: 1rem;
+  border-radius: 3px;
+  height: 4.5vh;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date1 input[type="date"]:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date2 #timepicker {
+  width: 7.5vw;
+  height: 3vh;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date2 input[type="time"] {
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  width: 8vw;
+  border: 1px solid #ced4da;
+  outline: none;
+  height: 4.5vh;
+  padding-left: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .dateAndTime .date2 input[type="time"]:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
+}
+
+.newContainer .addingTask .addingDetails .AssignUsers {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.newContainer .addingTask .addingDetails .AssignUsers #select {
+  margin-top: 0.5rem;
+  border: 1px solid #ced4da;
+  outline: none;
+  height: 4.5vh;
+  padding-left: 1rem;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .AssignUsers #select:focus {
+  -webkit-box-shadow: 0 0 5px #51cbee;
+          box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee;
+}
+
+.newContainer .addingTask .addingDetails .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 0.4rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons button {
+  width: 4vw;
+  margin-top: 2rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.newContainer .addingTask .addingDetails .buttons #cancel {
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  font-weight: 400;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .buttons #cancel:hover {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.newContainer .addingTask .addingDetails .buttons #save {
+  background-color: #47bb7f;
+  color: #ffff;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons #save:hover {
+  background-color: #399666;
+}
+
+.newContainer .addingTask .addingDetails .buttons .update {
+  background-color: #47bb7f;
+  color: #ffff;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.newContainer .addingTask .addingDetails .buttons .update:hover {
+  background-color: #399666;
+}
+
+.newContainer .addingTask .addingDetails .buttons .delbtn {
+  margin-right: auto;
+}
+
+.newContainer .addingTask .addingDetails .buttons .delbtn button {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  width: 3vw;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newContainer .addingTask .addingDetails .buttons .delbtn button:hover {
+  background-color: #e2e6ea;
+}
+
+.newContainer .addingTask .allShowData {
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #ced4da;
+  overflow: auto;
+  max-height: 35vh;
+  max-width: 30vw;
+  background-color: #ffffff;
+}
+
+.newContainer .addingTask .allShowData .showData {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 {
+  width: 18vw;
+  padding: 0.4rem;
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  max-height: 5vh;
+  margin-bottom: 0.5rem;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .userImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 3vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .userImage img {
+  border: 1px solid #ced4da;
+  width: 60%;
+  height: 60%;
+  border-radius: 3px;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 {
+  margin-left: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  line-height: 18px;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 p:nth-child(1) {
+  font-weight: 600;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .tasksCount1 p:nth-child(2) {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgba(255, 0, 0, 0.87);
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 {
+  width: 6.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 button {
+  cursor: pointer;
+  background-color: #e9e9e97a;
+  border: 1px solid #ced4da;
+  width: 2vw;
+  height: 3vh;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 button:hover {
+  background-color: #dcdcdc;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 .combinedBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 .combinedBtns button {
+  cursor: pointer;
+  border: 1px solid #ced4da;
+  width: 2vw;
+  height: 3vh;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.newContainer .addingTask .allShowData .showData .addingWrapper1 .Add1 .combinedBtns button:hover {
+  background-color: #dcdcdc;
+}
+
+.newContainer .addingTask .allShowData .ShowUserUpdates {
+  display: none;
+  background-color: #ecf6fc;
+  height: 15vh;
+}
+
+.newContainer .addingTask .allShowData1 {
+  display: block;
+}
+
+@media screen and (max-width: 1583px) and (max-height: 835px) {
+  .addingDetails {
+    width: 26vw !important;
+    height: 40vh !important;
+  }
+  .addingTask {
+    width: 26vw !important;
+  }
+  .addingWrapper1 {
+    width: 22vw !important;
+  }
+  .userImage {
+    max-width: 4vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 10vw !important;
+  }
+  #cancel {
+    width: 5vw !important;
+  }
+  #save {
+    width: 5vw !important;
+  }
+  .update {
+    width: 5vw !important;
+  }
+}
+
+@media screen and (max-width: 1413px) {
+  .addingDetails {
+    width: 28vw !important;
+  }
+  .addingTask {
+    width: 28vw !important;
+  }
+  .addingWrapper1 {
+    width: 22vw !important;
+  }
+  .userImage {
+    max-width: 4vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 11vw !important;
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .addingDetails {
+    width: 32vw !important;
+  }
+  .addingTask {
+    width: 32vw !important;
+  }
+  .addingWrapper1 {
+    width: 25vw !important;
+  }
+  .userImage {
+    max-width: 5vw !important;
+  }
+  .allShowData {
+    max-width: 40vw !important;
+  }
+  .Add1 {
+    width: 8vw !important;
+  }
+  .Add1 button {
+    width: 2.5vw !important;
+  }
+  .Add1 #fEdit {
+    width: 2.7vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 13vw !important;
+  }
+  #cancel {
+    width: 7vw !important;
+  }
+  #save {
+    width: 7vw !important;
+  }
+  .update {
+    width: 7vw !important;
+  }
+}
+
+@media screen and (max-width: 943px) {
+  .addingDetails {
+    width: 36vw !important;
+  }
+  .addingTask {
+    width: 36vw !important;
+  }
+  .addingWrapper1 {
+    width: 28vw !important;
+  }
+  .userImage {
+    max-width: 5vw !important;
+  }
+  .allShowData {
+    max-width: 40vw !important;
+  }
+  .Add1 {
+    width: 8vw !important;
+  }
+  .Add1 button {
+    width: 2.5vw !important;
+  }
+  .Add1 #fEdit {
+    width: 2.7vw !important;
+  }
+  .Add {
+    width: 5vw !important;
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .addingDetails {
+    width: 50vw !important;
+  }
+  .addingTask {
+    width: 50vw !important;
+  }
+  .addingWrapper1 {
+    width: 42vw !important;
+  }
+  .userImage {
+    max-width: 7vw !important;
+  }
+  .allShowData {
+    max-width: 100vw !important;
+  }
+  .Add1 {
+    width: 12vw !important;
+  }
+  .Add1 button {
+    width: 3.5vw !important;
+  }
+  .Add1 #fEdit {
+    width: 3.6vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 20vw !important;
+  }
+  #cancel {
+    width: 10vw !important;
+  }
+  #save {
+    width: 10vw !important;
+  }
+  .update {
+    width: 10vw !important;
+  }
+  .delbtn button {
+    width: 7vw !important;
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .addingDetails {
+    width: 60vw !important;
+  }
+  .Add {
+    width: 10vw !important;
+  }
+  .addingTask {
+    width: 60vw !important;
+  }
+  .addingWrapper1 {
+    width: 50vw !important;
+  }
+  .userImage {
+    max-width: 9vw !important;
+  }
+  .allShowData {
+    max-width: 100vw !important;
+  }
+  .Add1 {
+    width: 15vw !important;
+  }
+  .Add1 button {
+    width: 4vw !important;
+  }
+  .Add1 #fEdit {
+    width: 4vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 25vw !important;
+  }
+  #cancel {
+    width: 11vw !important;
+  }
+  #save {
+    width: 11vw !important;
+  }
+  .update {
+    width: 11vw !important;
+  }
+  .delbtn button {
+    width: 7vw !important;
+  }
+}
+
+@media screen and (max-width: 367px) {
+  .addingDetails {
+    width: 90vw !important;
+  }
+  .Add {
+    width: 15vw !important;
+  }
+  .addingTask {
+    width: 90vw !important;
+  }
+  .addingWrapper1 {
+    width: 68vw !important;
+  }
+  .userImage {
+    max-width: 15vw !important;
+  }
+  .allShowData {
+    max-width: 100vw !important;
+  }
+  .Add1 {
+    width: 30vw !important;
+  }
+  .Add1 button {
+    width: 8vw !important;
+  }
+  .Add1 #fEdit {
+    width: 8vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 36vw !important;
+  }
+  #cancel {
+    width: 17.5vw !important;
+  }
+  #save {
+    width: 17.5vw !important;
+  }
+  .update {
+    width: 17.5vw !important;
+  }
+  .delbtn button {
+    width: 10vw !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 510px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 65vh !important;
+  }
+  .Add {
+    width: 15vw !important;
+  }
+  .addingTask {
+    width: 90vw !important;
+  }
+  .addingWrapper1 {
+    width: 68vw !important;
+    padding: 1rem !important;
+  }
+  .userImage {
+    max-width: 16vw !important;
+  }
+  .allShowData {
+    max-width: 100vw !important;
+    max-height: 55vh !important;
+  }
+  .Add1 {
+    width: 30vw !important;
+  }
+  .Add1 button {
+    width: 8vw !important;
+    height: 5vh !important;
+  }
+  .Add1 #fEdit {
+    width: 8vw !important;
+  }
+  input[type="time"],
+  input[type="date"] {
+    width: 36vw !important;
+    height: 8vh !important;
+  }
+  input[type="text"] {
+    height: 8vh !important;
+  }
+  #select {
+    height: 8vh !important;
+  }
+  #cancel {
+    width: 17.5vw !important;
+  }
+  #save {
+    width: 17.5vw !important;
+  }
+  .update {
+    width: 17.5vw !important;
+  }
+  .delbtn button {
+    width: 10vw !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 390px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 75vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 410px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 75vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 500px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 75vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 599px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 60vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (max-height: 496px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 65vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+
+@media screen and (max-width: 367px) and (min-height: 605px) {
+  .addingDetails {
+    width: 90vw !important;
+    height: 60vh !important;
+  }
+  #adgWrapper {
+    max-height: 13vh !important;
+  }
+}
+/*# sourceMappingURL=new.css.map */

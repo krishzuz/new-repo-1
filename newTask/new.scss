@@ -1,0 +1,689 @@
+@import url("http://cdn.syncfusion.com/ej2/material.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500&display=swap");
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.newContainer {
+    display: flex;
+    justify-content: center;
+    .addingTask {
+        width: 22vw;
+        padding: 15px;
+        background-color: #fff;
+        .addingWrapper {
+            max-height: 5vh;
+            background-color: #f7f7f7;
+            border-top: 1px solid #ced4da;
+            border-left: 1px solid #ced4da;
+            border-right: 1px solid #ced4da;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            .tasksCount {
+                display: flex;
+                align-items: center;
+                margin-left: 1.3rem;
+                p {
+                    padding: 0.5rem;
+                    font-weight: 600;
+                    color: #000000;
+                }
+                span {
+                    color: #000;
+                    font-weight: 300;
+                    margin-left: 1rem;
+                }
+            }
+            .Add {
+                width: 3vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px solid #ced4da;
+                background-color: #f8f9fa;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: #e2e6ea;
+                }
+                p {
+                    padding: 0.5rem;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .addingDetails {
+            border: 1px solid #ced4da;
+            box-sizing: border-box;
+            display: none;
+            background-color: #ecf6fc;
+            width: 22vw;
+            height: 35vh;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #8175a6;
+            padding: 10px;
+            .taskDes {
+                display: flex;
+                flex-direction: column;
+                input[type="text"] {
+                    height: 4.5vh;
+                    margin-top: 0.5rem;
+                    border: 1px solid #ced4da;
+                    outline: none;
+                    padding-left: 1rem;
+                    border-radius: 3px;
+                    transition: all 0.2s ease-in-out;
+                }
+                input[type="text"]:focus {
+                    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                    border: 1px solid rgba(81, 203, 238, 1);
+                }
+            }
+            .dateAndTime {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                .date1 {
+                    display: flex;
+                    flex-direction: column;
+                    input[type="date"] {
+                        margin-top: 0.5rem;
+                        width: 8vw;
+                        border: 1px solid #ced4da;
+                        outline: none;
+                        padding-left: 1rem;
+                        border-radius: 3px;
+                        height: 4.5vh;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    input[type="date"]:focus {
+                        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                        border: 1px solid rgba(81, 203, 238, 1);
+                    }
+                }
+                .date2 {
+                    display: flex;
+                    flex-direction: column;
+                    #timepicker {
+                        width: 7.5vw;
+                        height: 3vh;
+                    }
+                    input[type="time"] {
+                        border-radius: 3px;
+                        margin-top: 0.5rem;
+                        width: 8vw;
+                        border: 1px solid #ced4da;
+                        outline: none;
+                        height: 4.5vh;
+                        padding-left: 1rem;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    input[type="time"]:focus {
+                        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                        border: 1px solid rgba(81, 203, 238, 1);
+                    }
+                }
+            }
+            .AssignUsers {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                #select {
+                    margin-top: 0.5rem;
+                    border: 1px solid #ced4da;
+                    outline: none;
+                    height: 4.5vh;
+                    padding-left: 1rem;
+                    border-radius: 3px;
+                    transition: all 0.2s ease-in-out;
+                }
+                #select:focus {
+                    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                    border: 1px solid rgba(81, 203, 238, 1);
+                }
+            }
+            .buttons {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 0.4rem;
+                button {
+                    width: 4vw;
+                    margin-top: 2rem;
+                    border: 1px solid #ced4da;
+                    font-size: 1rem;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                #cancel {
+                    padding: 0.5rem;
+                    background-color: #f8f9fa;
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: #fff;
+                        padding: 0.5rem;
+                        border-radius: 5px;
+                    }
+                }
+                #save {
+                    background-color: #47bb7f;
+                    color: #ffff;
+                    padding: 0.3rem;
+                    border-radius: 5px;
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    &:hover {
+                        background-color: #399666;
+                    }
+                }
+                .update {
+                    background-color: #47bb7f;
+                    color: #ffff;
+                    padding: 0.3rem;
+                    border-radius: 5px;
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    &:hover {
+                        background-color: #399666;
+                    }
+                }
+                .delbtn {
+                    margin-right: auto;
+                    button {
+                        border: 1px solid #ced4da;
+                        border-radius: 5px;
+                        width: 3vw;
+                        padding: 0.5rem;
+                        background-color: #f8f9fa;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            background-color: #e2e6ea;
+                        }
+                    }
+                }
+            }
+        }
+        .allShowData {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border: 1px solid #ced4da;
+            overflow: auto;
+            max-height: 35vh;
+            max-width: 30vw;
+            background-color: #ffffff;
+            .showData {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                .addingWrapper1 {
+                    width: 18vw;
+                    padding: 0.4rem;
+                    background-color: #ffffff;
+                    border: 1px solid #ced4da;
+                    border-radius: 5px;
+                    display: flex;
+                    font-size: 1rem;
+                    max-height: 5vh;
+                    margin-bottom: 0.5rem;
+                    .userImage {
+                        display: flex;
+                        max-width: 3vw;
+                        align-self: center;
+                        img {
+                            border: 1px solid #ced4da;
+                            width: 60%;
+                            height: 60%;
+                            border-radius: 3px;
+                        }
+                    }
+                    .tasksCount1 {
+                        margin-left: -1rem;
+                        display: flex;
+                        flex: 2;
+                        flex-direction: column;
+                        align-self: center;
+                        line-height: 18px;
+                        p:nth-child(1) {
+                            font-weight: 600;
+                            color: #000;
+                            font-size: 0.8rem;
+                        }
+                        p:nth-child(2) {
+                            font-weight: 400;
+                            font-size: 0.8rem;
+                            color: rgba(255, 0, 0, 0.87);
+                        }
+                    }
+                    .Add1 {
+                        width: 6.5vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+                        button {
+                            cursor: pointer;
+                            background-color: #e9e9e97a;
+                            border: 1px solid #ced4da;
+                            width: 2vw;
+                            height: 3vh;
+                            border-radius: 2px;
+                            transition: all 0.3s ease-in-out;
+                            &:hover {
+                                background-color: #dcdcdc;
+                            }
+                        }
+                        .combinedBtns {
+                            display: flex;
+                            button {
+                                cursor: pointer;
+                                border: 1px solid #ced4da;
+                                width: 2vw;
+                                height: 3vh;
+                                border-radius: 2px;
+                                transition: all 0.3s ease-in-out;
+                                &:hover {
+                                    background-color: #dcdcdc;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ShowUserUpdates {
+                display: none;
+                background-color: #ecf6fc;
+                height: 15vh;
+            }
+        }
+        .allShowData1 {
+            display: block;
+        }
+    }
+}
+
+@media screen and(max-width: 1583px) and(max-height:835px) {
+    .addingDetails {
+        width: 26vw !important;
+        height: 40vh !important;
+    }
+    .addingTask {
+        width: 26vw !important;
+    }
+    .addingWrapper1 {
+        width: 22vw !important;
+    }
+    .userImage {
+        max-width: 4vw !important;
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 10vw !important;
+    }
+    #cancel {
+        width: 5vw !important;
+    }
+    #save {
+        width: 5vw !important;
+    }
+    .update {
+        width: 5vw !important;
+    }
+}
+
+@media screen and(max-width: 1413px) {
+    .addingDetails {
+        width: 28vw !important;
+    }
+    .addingTask {
+        width: 28vw !important;
+    }
+    .addingWrapper1 {
+        width: 22vw !important;
+    }
+    .userImage {
+        max-width: 4vw !important;
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 11vw !important;
+    }
+}
+
+@media screen and(max-width: 1059px) {
+    .addingDetails {
+        width: 32vw !important;
+    }
+    .addingTask {
+        width: 32vw !important;
+    }
+    .addingWrapper1 {
+        width: 25vw !important;
+    }
+    .userImage {
+        max-width: 5vw !important;
+    }
+    .allShowData {
+        max-width: 40vw !important;
+    }
+    .Add1 {
+        width: 8vw !important;
+        button {
+            width: 2.5vw !important;
+        }
+        #fEdit {
+            width: 2.7vw !important;
+        }
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 13vw !important;
+    }
+    #cancel {
+        width: 7vw !important;
+    }
+    #save {
+        width: 7vw !important;
+    }
+    .update {
+        width: 7vw !important;
+    }
+}
+
+@media screen and(max-width: 943px) {
+    .addingDetails {
+        width: 36vw !important;
+    }
+    .addingTask {
+        width: 36vw !important;
+    }
+    .addingWrapper1 {
+        width: 28vw !important;
+    }
+    .userImage {
+        max-width: 5vw !important;
+    }
+    .allShowData {
+        max-width: 40vw !important;
+    }
+    .Add1 {
+        width: 8vw !important;
+        button {
+            width: 2.5vw !important;
+        }
+        #fEdit {
+            width: 2.7vw !important;
+        }
+    }
+    .Add {
+        width: 5vw !important;
+    }
+}
+
+@media screen and(max-width: 863px) {
+    .addingDetails {
+        width: 50vw !important;
+    }
+    .addingTask {
+        width: 50vw !important;
+    }
+    .addingWrapper1 {
+        width: 42vw !important;
+    }
+    .userImage {
+        max-width: 7vw !important;
+    }
+    .allShowData {
+        max-width: 100vw !important;
+    }
+    .Add1 {
+        width: 12vw !important;
+        button {
+            width: 3.5vw !important;
+        }
+        #fEdit {
+            width: 3.6vw !important;
+        }
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 20vw !important;
+    }
+    #cancel {
+        width: 10vw !important;
+    }
+    #save {
+        width: 10vw !important;
+    }
+    .update {
+        width: 10vw !important;
+    }
+    .delbtn {
+        button {
+            width: 7vw !important;
+        }
+    }
+}
+
+@media screen and(max-width: 669px) {
+    .addingDetails {
+        width: 60vw !important;
+    }
+    .Add {
+        width: 10vw !important;
+    }
+    .addingTask {
+        width: 60vw !important;
+    }
+    .addingWrapper1 {
+        width: 50vw !important;
+    }
+    .userImage {
+        max-width: 9vw !important;
+    }
+    .allShowData {
+        max-width: 100vw !important;
+    }
+    .Add1 {
+        width: 15vw !important;
+        button {
+            width: 4vw !important;
+        }
+        #fEdit {
+            width: 4vw !important;
+        }
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 25vw !important;
+    }
+    #cancel {
+        width: 11vw !important;
+    }
+    #save {
+        width: 11vw !important;
+    }
+    .update {
+        width: 11vw !important;
+    }
+    .delbtn {
+        button {
+            width: 7vw !important;
+        }
+    }
+}
+
+@media screen and(max-width: 367px) {
+    .addingDetails {
+        width: 90vw !important;
+    }
+    .Add {
+        width: 15vw !important;
+    }
+    .addingTask {
+        width: 90vw !important;
+    }
+    .addingWrapper1 {
+        width: 68vw !important;
+    }
+    .userImage {
+        max-width: 15vw !important;
+    }
+    .allShowData {
+        max-width: 100vw !important;
+    }
+    .Add1 {
+        width: 30vw !important;
+        button {
+            width: 8vw !important;
+        }
+        #fEdit {
+            width: 8vw !important;
+        }
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 36vw !important;
+    }
+    #cancel {
+        width: 17.5vw !important;
+    }
+    #save {
+        width: 17.5vw !important;
+    }
+    .update {
+        width: 17.5vw !important;
+    }
+    .delbtn {
+        button {
+            width: 10vw !important;
+        }
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 510px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 65vh !important;
+    }
+    .Add {
+        width: 15vw !important;
+    }
+    .addingTask {
+        width: 90vw !important;
+    }
+    .addingWrapper1 {
+        width: 68vw !important;
+        padding: 1rem !important;
+    }
+    .userImage {
+        max-width: 16vw !important;
+    }
+    .allShowData {
+        max-width: 100vw !important;
+        max-height: 55vh !important;
+    }
+    .Add1 {
+        width: 30vw !important;
+        button {
+            width: 8vw !important;
+            height: 5vh !important;
+        }
+        #fEdit {
+            width: 8vw !important;
+        }
+    }
+    input[type="time"],
+    input[type="date"] {
+        width: 36vw !important;
+        height: 8vh !important;
+    }
+    input[type="text"] {
+        height: 8vh !important;
+    }
+    #select {
+        height: 8vh !important;
+    }
+    #cancel {
+        width: 17.5vw !important;
+    }
+    #save {
+        width: 17.5vw !important;
+    }
+    .update {
+        width: 17.5vw !important;
+    }
+    .delbtn {
+        button {
+            width: 10vw !important;
+        }
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 390px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 75vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 410px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 75vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 500px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 75vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 599px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 60vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
+
+@media screen and(max-width: 367px) and (max-height: 496px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 65vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
+
+@media screen and(max-width: 367px) and (min-height: 605px) {
+    .addingDetails {
+        width: 90vw !important;
+        height: 60vh !important;
+    }
+    #adgWrapper {
+        max-height: 13vh !important;
+    }
+}
