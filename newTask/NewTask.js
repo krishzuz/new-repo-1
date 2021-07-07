@@ -42,8 +42,6 @@ export default function NewTask() {
 
   //ends
   //functions
-
-  //ends
   const updateDrop = (data) => {
     //time.
     var timestamp = data.task_time;
@@ -112,8 +110,7 @@ export default function NewTask() {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer " +
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjUxMjIyNTEsIm5iZiI6MTYyNTEyMjI1MSwianRpIjoiOWE5ZjQwNzgtNDVmMy00NWMwLWJlMWEtZWJiOGJmZjM3MGRhIiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1YmkgU2lyIiwiZW1haWwiOiJzbWl0aGNoZXJ5bEB5YWhvby5jb20iLCJ1c2VyX2lkIjoidXNlcl82YmVlYzQ1OTkxNWY0NTA3YThkMjUyMGU2MGUwM2MzZSIsImNvbXBhbnlfaWQiOiJjb21wYW55XzNjNjhjZDk0ZWJkNjQ4Yzc4ZDc2ODcyY2ZhOWY4Y2ZiIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9mMmU5YWNkZWM4MTdlMjRkMjk4MGQ4NTNlODkzODVmNT9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.4QiAK2edYxGpKJm-EEIVqKL-Nh5mhq3WfNBqdwM0gQA",
+          "Bearer " + ACCESS_TOKEN
 
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -133,8 +130,7 @@ export default function NewTask() {
       method: "GET",
       headers: {
         Authorization:
-          "Bearer " +
-          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjUxMjIyNTEsIm5iZiI6MTYyNTEyMjI1MSwianRpIjoiOWE5ZjQwNzgtNDVmMy00NWMwLWJlMWEtZWJiOGJmZjM3MGRhIiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1YmkgU2lyIiwiZW1haWwiOiJzbWl0aGNoZXJ5bEB5YWhvby5jb20iLCJ1c2VyX2lkIjoidXNlcl82YmVlYzQ1OTkxNWY0NTA3YThkMjUyMGU2MGUwM2MzZSIsImNvbXBhbnlfaWQiOiJjb21wYW55XzNjNjhjZDk0ZWJkNjQ4Yzc4ZDc2ODcyY2ZhOWY4Y2ZiIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9mMmU5YWNkZWM4MTdlMjRkMjk4MGQ4NTNlODkzODVmNT9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.4QiAK2edYxGpKJm-EEIVqKL-Nh5mhq3WfNBqdwM0gQA",
+          "Bearer " + ACCESS_TOKEN
 
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -250,8 +246,7 @@ export default function NewTask() {
           method: "GET",
           headers: {
             Authorization:
-              "Bearer " +
-              "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MjUxMjIyNTEsIm5iZiI6MTYyNTEyMjI1MSwianRpIjoiOWE5ZjQwNzgtNDVmMy00NWMwLWJlMWEtZWJiOGJmZjM3MGRhIiwiaWRlbnRpdHkiOnsibmFtZSI6IlN1YmkgU2lyIiwiZW1haWwiOiJzbWl0aGNoZXJ5bEB5YWhvby5jb20iLCJ1c2VyX2lkIjoidXNlcl82YmVlYzQ1OTkxNWY0NTA3YThkMjUyMGU2MGUwM2MzZSIsImNvbXBhbnlfaWQiOiJjb21wYW55XzNjNjhjZDk0ZWJkNjQ4Yzc4ZDc2ODcyY2ZhOWY4Y2ZiIiwiaWNvbiI6Imh0dHA6Ly93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9mMmU5YWNkZWM4MTdlMjRkMjk4MGQ4NTNlODkzODVmNT9kZWZhdWx0PWh0dHBzJTNBJTJGJTJGczMuc2xvb3ZpLmNvbSUyRmF2YXRhci1kZWZhdWx0LWljb24ucG5nIiwiYnlfZGVmYXVsdCI6Im91dHJlYWNoIn0sImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.4QiAK2edYxGpKJm-EEIVqKL-Nh5mhq3WfNBqdwM0gQA",
+              "Bearer " + ACCESS_TOKEN
 
             Accept: "application/json",
             "Content-Type": "application/json",
